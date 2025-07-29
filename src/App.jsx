@@ -9,41 +9,19 @@ import { Adduser } from './practice/Adduser'
 import { Displayuser } from './practice/Displayuser'
 import { Login } from './Userdetails/login'
 import { Confirmation } from './Userdetails/confirmation'
+import { SqrCub } from './practice/SqrCub'
+import { A } from './practice/A'
+import { UserProvider } from './practice/UserProvider'
 
 
 
 function App() {
-  // const [user, setUser] = useState('')
-  // const [username, setUsername] = useState('')
-
-  const [user, setUser] = useState('')
-  const [password, setPassword] = useState('')
-
-  const handleLogin = (username, password) => {
-  setUser(username);
-  setPassword(password);
-  }
-
   return (
-    <>
-      {/* <div>
-        <input
-          type="text"
-          value={user}
-          onChange={e => setUser(e.target.value)}
-          placeholder="Enter text here"
-        />
-        <button onClick={handleSubmit}>Submit</button>
-      </div>
-      <Question1 text={"hello"} />
-      {/* <UserCard un={username} /> */}
-      {/* <Counter />
-      <Adduser setUser={setUser} />
-      <Displayuser user={user}/> */} 
-     <Login onLogin={handleLogin} />
-      <Confirmation username={user} password={password} />
-    </>
-  )
+    <UserProvider>
+      <A />
+    </UserProvider>
+  );
 }
+
 
 export default App
